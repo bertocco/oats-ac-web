@@ -1,0 +1,45 @@
+plugins {
+    id 'java'
+    id 'maven'
+    id 'maven-publish'
+    id 'com.jfrog.bintray' version '1.7.1'
+}
+
+repositories {
+    jcenter()
+    mavenLocal()
+}
+
+//jar.archiveName = "cadc-access-control-server.jar"
+
+apply plugin: 'war'
+
+war {
+	archiveName 'ac.war'
+}
+
+sourceCompatibility = 1.7
+group = 'org.opencadc'
+
+version = '1.0.1'
+
+dependencies {
+    
+    runtime 'log4j:log4j:1.2.+'
+    runtime 'org.jdom:jdom2:2.+'
+    runtime 'org.json:json:20160212'
+    runtime 'xerces:xercesImpl:2.+'
+    runtime 'javax.servlet:javax.servlet-api:3.1.+'
+    runtime 'com.unboundid:unboundid-ldapsdk:2.3.+'
+    runtime 'jaxen:jaxen:1.1.+'
+    runtime 'org.opencadc:cadc-log:1.+'
+    runtime 'org.opencadc:cadc-util:1.+'
+    runtime 'org.opencadc:cadc-registry:1.+'
+    runtime 'org.opencadc:cadc-vosi:1.+'
+    runtime 'org.opencadc:cadc-uws:1.+'
+    runtime 'org.opencadc:cadc-uws-server:1.+'
+    runtime 'org.opencadc:cadc-access-control:1.+'
+    runtime 'org.opencadc:cadc-access-control-identity:1.+'
+    runtime 'org.opencadc:cadc-access-control-server:1.+'
+    
+}
