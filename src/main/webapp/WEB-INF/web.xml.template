@@ -178,7 +178,6 @@
 
   <!-- sync ac search servlet-->
 
-<!--
   <servlet>
     <servlet-name>ACSearchServlet</servlet-name>
     <servlet-class>ca.nrc.cadc.uws.server.SyncServlet</servlet-class>
@@ -196,7 +195,6 @@
     </init-param>
     <load-on-startup>2</load-on-startup>
   </servlet>
--->
 
 <!--
   <servlet>
@@ -240,6 +238,7 @@
         ca.nrc.cadc.vosi
 	ca.nrc.cadc.core
 	ca.nrc.cadc.reg
+        ca.nrc.cadc.ac.server.web
         ca.nrc.cadc.ac.server.ldap
         ca.nrc.cadc.ac.server    
       </param-value>
@@ -302,7 +301,6 @@
     <url-pattern>/auth/resetPassword</url-pattern>
   </servlet-mapping>
 
-<!--
   <servlet-mapping>
     <servlet-name>ACSearchServlet</servlet-name>
     <url-pattern>/search/*</url-pattern>
@@ -312,8 +310,6 @@
     <servlet-name>ACSearchServlet</servlet-name>
     <url-pattern>/auth/search/*</url-pattern>
   </servlet-mapping>
--->
-
 
 <servlet-mapping>
     <servlet-name>WhoAmIServlet</servlet-name>
